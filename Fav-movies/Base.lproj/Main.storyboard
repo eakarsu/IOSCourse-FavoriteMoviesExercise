@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8HG-ch-SE1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fav_movies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,345 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="149" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z3O-Y9-NGe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="1" green="0.3937417842" blue="0.90991087380000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="149" id="G8U-zQ-CQu" customClass="MovieCell" customModule="Fav_movies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="149"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G8U-zQ-CQu" id="T89-Lx-ZNa">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glj-NU-G7z">
+                                                    <rect key="frame" x="193" y="8" width="275" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="275" id="axT-vQ-hTQ"/>
+                                                        <constraint firstAttribute="height" constant="30" id="bLV-XW-h8E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB Url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urX-bi-mXL">
+                                                    <rect key="frame" x="193" y="51" width="275" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="5Ai-p5-opV"/>
+                                                        <constraint firstAttribute="width" constant="275" id="t9z-yY-RcH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Creed" translatesAutoresizingMaskIntoConstraints="NO" id="V9u-h1-Had">
+                                                    <rect key="frame" x="13" y="8" width="157" height="126"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="157" id="00T-wa-Gof"/>
+                                                        <constraint firstAttribute="height" constant="126" id="M0W-ln-NLR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1S-oe-YJq">
+                                                    <rect key="frame" x="193" y="104" width="275" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Chg-V8-9bg"/>
+                                                        <constraint firstAttribute="width" constant="275" id="eKe-90-1Hm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="urX-bi-mXL" firstAttribute="leading" secondItem="V9u-h1-Had" secondAttribute="trailing" constant="23" id="7NU-L1-32t"/>
+                                                <constraint firstItem="glj-NU-G7z" firstAttribute="leading" secondItem="V9u-h1-Had" secondAttribute="trailing" constant="23" id="MoQ-jf-qMe"/>
+                                                <constraint firstItem="J1S-oe-YJq" firstAttribute="leading" secondItem="V9u-h1-Had" secondAttribute="trailing" constant="23" id="N2B-UC-wo7"/>
+                                                <constraint firstItem="urX-bi-mXL" firstAttribute="top" secondItem="glj-NU-G7z" secondAttribute="bottom" constant="13" id="Phx-dT-kxw"/>
+                                                <constraint firstItem="glj-NU-G7z" firstAttribute="top" secondItem="T89-Lx-ZNa" secondAttribute="topMargin" id="aS0-DZ-ltY"/>
+                                                <constraint firstItem="J1S-oe-YJq" firstAttribute="top" secondItem="urX-bi-mXL" secondAttribute="bottom" constant="23" id="cYc-YK-Kly"/>
+                                                <constraint firstItem="V9u-h1-Had" firstAttribute="top" secondItem="T89-Lx-ZNa" secondAttribute="topMargin" id="fiM-2d-rUZ"/>
+                                                <constraint firstItem="V9u-h1-Had" firstAttribute="leading" secondItem="T89-Lx-ZNa" secondAttribute="leadingMargin" constant="5" id="nQn-cf-1Jc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imdbImage" destination="V9u-h1-Had" id="Kpa-mE-nFQ"/>
+                                            <outlet property="imdbURL" destination="urX-bi-mXL" id="XNe-Gq-cFc"/>
+                                            <outlet property="movieTitle" destination="glj-NU-G7z" id="Qdl-Fp-TfB"/>
+                                            <outlet property="myDescription" destination="J1S-oe-YJq" id="E0P-A0-DM0"/>
+                                            <segue destination="BeJ-9b-PBZ" kind="show" identifier="cellSubmitSegue" id="jKR-9j-f9B"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Yqb-Mq-R4c"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tR9-xG-zma"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Z3O-Y9-NGe" secondAttribute="trailing" id="MOs-vo-MCV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z3O-Y9-NGe" secondAttribute="bottom" id="doJ-t3-SQN"/>
+                            <constraint firstItem="Z3O-Y9-NGe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kkb-9D-XWb"/>
+                            <constraint firstItem="Z3O-Y9-NGe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ujw-EJ-aP4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="IhP-VZ-prb">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="zI6-dv-0j3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mVq-to-EaI">
+                                <rect key="frame" x="524" y="7" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+ NEW">
+                                    <color key="titleColor" red="1" green="0.09440872132" blue="0.092720316659999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vQc-t7-Fsb" kind="show" id="W6Z-Sv-bOx"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="movieTableView" destination="Z3O-Y9-NGe" id="A7F-Ge-nsf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1152" y="429"/>
+        </scene>
+        <!--Add New MovieVC-->
+        <scene sceneID="VT9-4V-eXz">
+            <objects>
+                <viewController id="vQc-t7-Fsb" customClass="AddNewMovieVC" customModule="Fav_movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bX0-31-oHl"/>
+                        <viewControllerLayoutGuide type="bottom" id="GV7-sM-OHv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M5K-fa-dH0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25K-72-qvi">
+                                <rect key="frame" x="43" y="145" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="528" id="6Hc-KJ-Vam"/>
+                                    <constraint firstAttribute="height" constant="30" id="CqE-dX-3nf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Cu6-Vk-l2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuG-1K-Ol8">
+                                <rect key="frame" x="43" y="201" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="9Dk-jy-7Jf"/>
+                                    <constraint firstAttribute="width" constant="528" id="UO3-s1-OcT"/>
+                                    <constraint firstAttribute="height" constant="30" id="tnT-o4-bO7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB Plot Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-2Y-PtB">
+                                <rect key="frame" x="43" y="309" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="528" id="0hM-N8-kfU"/>
+                                    <constraint firstAttribute="height" constant="30" id="AgY-hW-waa"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USA-Pg-iov">
+                                <rect key="frame" x="251" y="542" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="VjU-st-Mst"/>
+                                    <constraint firstAttribute="height" constant="30" id="ee0-23-gsG"/>
+                                </constraints>
+                                <state key="normal" title="Add Movie"/>
+                                <connections>
+                                    <action selector="createMovie:" destination="vQc-t7-Fsb" eventType="touchUpInside" id="b88-Cx-Lk3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Creed" translatesAutoresizingMaskIntoConstraints="NO" id="sog-MY-0fY">
+                                <rect key="frame" x="175" y="360" width="199" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="RKY-y2-ze6"/>
+                                    <constraint firstAttribute="width" constant="199" id="b7O-Qm-0rl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3k-CD-G9G">
+                                <rect key="frame" x="212" y="415" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Jhe-MO-MLw"/>
+                                    <constraint firstAttribute="height" constant="30" id="kdX-5u-kP0"/>
+                                </constraints>
+                                <state key="normal" title="ADD IMAGE">
+                                    <color key="titleColor" red="1" green="0.9958472505" blue="0.18178053080000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImage:" destination="vQc-t7-Fsb" eventType="touchUpInside" id="ugF-Ck-ajQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsJ-4g-zaD">
+                                <rect key="frame" x="43" y="260" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jN5-5u-ddj"/>
+                                    <constraint firstAttribute="height" constant="30" id="tHr-4E-dSk"/>
+                                    <constraint firstAttribute="width" constant="528" id="uVa-FM-WgY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vsJ-4g-zaD" secondAttribute="trailing" constant="29" id="0mM-ba-Tmg"/>
+                            <constraint firstItem="fuG-1K-Ol8" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="27L-Fg-UIc"/>
+                            <constraint firstItem="fuG-1K-Ol8" firstAttribute="top" secondItem="25K-72-qvi" secondAttribute="bottom" constant="26" id="3HZ-L9-Oa4"/>
+                            <constraint firstAttribute="trailing" secondItem="fuG-1K-Ol8" secondAttribute="trailing" constant="29" id="3o0-M6-Ybp"/>
+                            <constraint firstItem="vsJ-4g-zaD" firstAttribute="top" secondItem="fuG-1K-Ol8" secondAttribute="bottom" constant="29" id="5KH-z9-lWH"/>
+                            <constraint firstItem="vsJ-4g-zaD" firstAttribute="top" secondItem="fuG-1K-Ol8" secondAttribute="bottom" constant="29" id="6Et-db-dNF"/>
+                            <constraint firstItem="sog-MY-0fY" firstAttribute="top" secondItem="jR8-2Y-PtB" secondAttribute="bottom" constant="22" id="8Jn-GF-evN"/>
+                            <constraint firstItem="sog-MY-0fY" firstAttribute="centerX" secondItem="M5K-fa-dH0" secondAttribute="centerX" id="Bcn-fk-PMB"/>
+                            <constraint firstItem="fuG-1K-Ol8" firstAttribute="top" secondItem="25K-72-qvi" secondAttribute="bottom" constant="26" id="C0e-xt-GKw"/>
+                            <constraint firstAttribute="trailing" secondItem="25K-72-qvi" secondAttribute="trailing" constant="29" id="DEm-vX-fYN"/>
+                            <constraint firstItem="jR8-2Y-PtB" firstAttribute="top" secondItem="vsJ-4g-zaD" secondAttribute="bottom" constant="19" id="FGO-SL-lEA"/>
+                            <constraint firstItem="fuG-1K-Ol8" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="Gnv-H6-C8c"/>
+                            <constraint firstItem="25K-72-qvi" firstAttribute="top" secondItem="bX0-31-oHl" secondAttribute="bottom" constant="81" id="ITQ-Jp-jpt"/>
+                            <constraint firstItem="jR8-2Y-PtB" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="Ulm-yC-i04"/>
+                            <constraint firstItem="vsJ-4g-zaD" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="V7z-Me-skf"/>
+                            <constraint firstItem="USA-Pg-iov" firstAttribute="centerX" secondItem="M5K-fa-dH0" secondAttribute="centerX" id="VWN-xy-XCS"/>
+                            <constraint firstAttribute="trailing" secondItem="jR8-2Y-PtB" secondAttribute="trailing" constant="29" id="Vet-gT-hLU"/>
+                            <constraint firstAttribute="trailing" secondItem="vsJ-4g-zaD" secondAttribute="trailing" constant="29" id="XLk-Rt-lbQ"/>
+                            <constraint firstItem="fuG-1K-Ol8" firstAttribute="top" secondItem="25K-72-qvi" secondAttribute="bottom" constant="26" id="Xqh-m9-zSr"/>
+                            <constraint firstItem="USA-Pg-iov" firstAttribute="top" secondItem="sog-MY-0fY" secondAttribute="bottom" constant="20" id="Zuq-vs-jqb"/>
+                            <constraint firstItem="25K-72-qvi" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="bCG-RR-B1w"/>
+                            <constraint firstItem="A3k-CD-G9G" firstAttribute="top" secondItem="jR8-2Y-PtB" secondAttribute="bottom" constant="76" id="f4U-DB-iNf"/>
+                            <constraint firstItem="vsJ-4g-zaD" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="gdI-78-gqe"/>
+                            <constraint firstAttribute="trailing" secondItem="25K-72-qvi" secondAttribute="trailing" constant="29" id="kEq-JP-PpY"/>
+                            <constraint firstAttribute="trailing" secondItem="fuG-1K-Ol8" secondAttribute="trailing" constant="29" id="lzu-PV-GUC"/>
+                            <constraint firstItem="25K-72-qvi" firstAttribute="top" secondItem="bX0-31-oHl" secondAttribute="bottom" constant="81" id="oUb-a5-H4g"/>
+                            <constraint firstItem="jR8-2Y-PtB" firstAttribute="top" secondItem="vsJ-4g-zaD" secondAttribute="bottom" constant="19" id="u34-EC-YGK"/>
+                            <constraint firstItem="A3k-CD-G9G" firstAttribute="centerX" secondItem="M5K-fa-dH0" secondAttribute="centerX" id="w3e-5d-kuo"/>
+                            <constraint firstItem="vsJ-4g-zaD" firstAttribute="top" secondItem="fuG-1K-Ol8" secondAttribute="bottom" constant="29" id="yAM-O2-2nx"/>
+                            <constraint firstItem="25K-72-qvi" firstAttribute="leading" secondItem="M5K-fa-dH0" secondAttribute="leading" constant="43" id="yoL-Ez-IcY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addMovieButton" destination="USA-Pg-iov" id="ImB-rx-PLo"/>
+                        <outlet property="imdbImage" destination="sog-MY-0fY" id="yyn-qJ-NA2"/>
+                        <outlet property="imdbPlotDescription" destination="jR8-2Y-PtB" id="e8n-RO-Yw4"/>
+                        <outlet property="imdbURL" destination="fuG-1K-Ol8" id="agM-KE-LNa"/>
+                        <outlet property="movieTitle" destination="25K-72-qvi" id="MKG-CE-IJn"/>
+                        <outlet property="myDescription" destination="vsJ-4g-zaD" id="0CG-GJ-t3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMO-zW-i3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="438"/>
+        </scene>
+        <!--Movie DetailsVC-->
+        <scene sceneID="NT7-8P-rkj">
+            <objects>
+                <viewController id="BeJ-9b-PBZ" customClass="MovieDetailsVC" customModule="Fav_movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Gy-49-Hhw"/>
+                        <viewControllerLayoutGuide type="bottom" id="PA0-Do-8bb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0uR-EV-o1C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pWz-vW-O3E">
+                                <rect key="frame" x="95" y="92" width="296" height="387"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Creed" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-4D-cmY">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="296" id="Rmh-F8-Ilc"/>
+                                            <constraint firstAttribute="height" constant="115" id="iku-zY-bBZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTh-kL-Cy3">
+                                        <rect key="frame" x="0.0" y="125" width="296" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="434" id="HKO-wg-waZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="NSq-yV-kWs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IMDB URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qob-Iw-W7j">
+                                        <rect key="frame" x="0.0" y="165" width="296" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="434" id="Nba-RX-tbE"/>
+                                            <constraint firstAttribute="height" constant="30" id="y9C-ch-Wwz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5Pi-J0-rbq">
+                                        <rect key="frame" x="0.0" y="205" width="296" height="98"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="Uzr-mS-B6s"/>
+                                            <constraint firstAttribute="width" constant="434" id="i45-aU-tAs"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZdZ-mj-vWQ">
+                                        <rect key="frame" x="0.0" y="313" width="296" height="74"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="74" id="TEq-rV-2ko"/>
+                                            <constraint firstAttribute="width" constant="434" id="esf-FC-yJO"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imdbImage" destination="Jiv-4D-cmY" id="1BP-hT-5By"/>
+                        <outlet property="imdbPlotDescription" destination="ZdZ-mj-vWQ" id="Svi-op-0nc"/>
+                        <outlet property="imdbURL" destination="Qob-Iw-W7j" id="kvb-xK-eUY"/>
+                        <outlet property="movieTitle" destination="NTh-kL-Cy3" id="et8-qK-ycK"/>
+                        <outlet property="myDescription" destination="5Pi-J0-rbq" id="WA6-5I-A2D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMw-Lb-nbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="1150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FQC-BT-4TK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8HG-ch-SE1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIs-t6-bXY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.52850833166011468" green="0.98150088646516864" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bMs-G6-Eb1">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lly-n5-rmW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTB-T4-woi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1089"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Creed" width="214" height="317"/>
+    </resources>
 </document>
