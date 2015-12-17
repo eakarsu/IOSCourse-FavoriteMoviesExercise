@@ -11,7 +11,7 @@ import CoreData
 
 class MovieDetailsVC: UIViewController {
 
-    
+    var selectedMovie:Movie!
     @IBOutlet weak var imdbImage: UIImageView!
     
     
@@ -38,14 +38,15 @@ class MovieDetailsVC: UIViewController {
     }
     
     func configureMovie (selectedMovie:Movie){
-        //imdbPlotDescription.text = selectedMovie.imdbPlotDescription
-        imdbImage.image = selectedMovie.getMovieImg()
-        movieTitle.text = selectedMovie.movieTitle
-        imdbURL.text = selectedMovie.imdbURL
+        self.selectedMovie = selectedMovie
     }
     
     override func viewDidAppear(animated: Bool) {
-       
+        imdbPlotDescription.text = selectedMovie.imdbPlotDescription
+        imdbImage.image = selectedMovie.getMovieImg()
+        movieTitle.text = selectedMovie.movieTitle
+        imdbURL.text = selectedMovie.imdbURL
+        myDescription.text = selectedMovie.myDescription
     } 
 
     
