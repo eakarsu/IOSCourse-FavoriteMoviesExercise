@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1509" minimumToolsVersion="Automatic">
     <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="imdbImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="imdbPlotDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imdbURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="movieTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="myDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="schemaVersion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Movie" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="Movie" positionX="-54" positionY="-9" width="128" height="180"/>
     </elements>
 </model>

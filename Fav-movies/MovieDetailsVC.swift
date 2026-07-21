@@ -1,53 +1,33 @@
-//
-//  MovieDetailsVC.swift
-//  Fav-movies
-//
-//  Created by Erol Akarsu on 12/17/15.
-//  Copyright © 2015 Erol Akarsu. All rights reserved.
-//
-
 import UIKit
-import CoreData
 
-class MovieDetailsVC: UIViewController {
+final class MovieDetailsVC: UIViewController {
+    private var movie: FavoriteMovieRecord?
+    @IBOutlet private weak var imdbImage: UIImageView!
+    @IBOutlet private weak var movieTitle: UITextField!
+    @IBOutlet private weak var imdbURL: UITextField!
+    @IBOutlet private weak var myDescription: UITextView!
+    @IBOutlet private weak var imdbPlotDescription: UITextView!
 
-    var selectedMovie:Movie!
-    @IBOutlet weak var imdbImage: UIImageView!
-    
-    
-    
-    @IBOutlet weak var movieTitle: UITextField!
-    
-    
-    @IBOutlet weak var imdbURL: UITextField!
-    
-    
-    
-    @IBOutlet weak var myDescription: UITextView!
-    @IBOutlet weak var imdbPlotDescription: UITextView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    func configure(movie: FavoriteMovieRecord) { self.movie = movie }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view, typically from a nib.
+        guard let movie else {
+            view.accessibilityIdentifier = "movie.details.error"
+            return
+        }
+        imdbPlotDescription.text = movie.plotDescription
+        imdbImage.image = movie.imageData.flatMap(UIImage.init(data:))
+        movieTitle.text = movie.title
+        imdbURL.text = movie.imdbURL
+        myDescription.text = movie.personalDescription
+        [movieTitle, imdbURL].forEach { $0?.isUserInteractionEnabled = false }
+        [myDescription, imdbPlotDescription].forEach { $0?.isEditable = false; $0?.adjustsFontForContentSizeCategory = true }
+        movieTitle.accessibilityIdentifier = "movie.details.title"
+        imdbURL.accessibilityIdentifier = "movie.details.url"
+        myDescription.accessibilityIdentifier = "movie.details.personalDescription"
+        imdbPlotDescription.accessibilityIdentifier = "movie.details.plot"
+        view.accessibilityIdentifier = "movie.details.offline"
+        navigationItem.title = movie.title
     }
-    
-    func configureMovie (selectedMovie:Movie){
-        self.selectedMovie = selectedMovie
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        imdbPlotDescription.text = selectedMovie.imdbPlotDescription
-        imdbImage.image = selectedMovie.getMovieImg()
-        movieTitle.text = selectedMovie.movieTitle
-        imdbURL.text = selectedMovie.imdbURL
-        myDescription.text = selectedMovie.myDescription
-    } 
-
-    
 }

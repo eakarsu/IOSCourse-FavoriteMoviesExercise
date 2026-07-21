@@ -1,23 +1,13 @@
-//
-//  Movie+CoreDataProperties.swift
-//  Fav-movies
-//
-//  Created by Erol Akarsu on 12/16/15.
-//  Copyright © 2015 Erol Akarsu. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
-//
-
-import Foundation
 import CoreData
+import Foundation
 
 extension Movie {
-
+    @NSManaged var id: UUID?
+    @NSManaged var createdAt: Date?
+    @NSManaged var schemaVersion: Int16
     @NSManaged var movieTitle: String?
     @NSManaged var imdbURL: String?
     @NSManaged var myDescription: String?
     @NSManaged var imdbPlotDescription: String?
-    @NSManaged var imdbImage: NSData?
-
+    @NSManaged var imdbImage: Data?
 }

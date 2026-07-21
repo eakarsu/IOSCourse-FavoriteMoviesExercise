@@ -1,0 +1,3 @@
+module FavoriteMoviesCore {
+    header "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/include/FavoriteMoviesCore-Swift.h"
+}

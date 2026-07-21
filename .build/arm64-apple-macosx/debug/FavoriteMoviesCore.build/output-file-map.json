@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/primary.swiftdeps"
+  },
+  "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Sources/FavoriteMoviesCore/FavoriteMoviesRepository.swift": {
+    "dependencies": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.d",
+    "object": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.swift.o",
+    "swiftmodule": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository~partial.swiftmodule",
+    "swift-dependencies": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.swiftdeps",
+    "diagnostics": "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.dia"
+  }
+}

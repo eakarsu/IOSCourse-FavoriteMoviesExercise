@@ -1,0 +1,602 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.xctest/Contents/MacOS/FavoriteMoviesCorePackageTests",
+      "packagePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise",
+      "productName" : "FavoriteMoviesCorePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.FavoriteMoviesCore-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/sources",
+      "importPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Sources/FavoriteMoviesCore/FavoriteMoviesRepository.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FavoriteMoviesCore",
+      "moduleOutputPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCore.swiftmodule",
+      "objects" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/include/FavoriteMoviesCore-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ioscourse_favoritemoviesexercise"
+      ],
+      "outputFileMapPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Sources/FavoriteMoviesCore/FavoriteMoviesRepository.swift"
+      ],
+      "tempsPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.FavoriteMoviesCorePackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/sources",
+      "importPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCoreTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FavoriteMoviesCorePackageTests",
+      "moduleOutputPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCorePackageTests.swiftmodule",
+      "objects" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/include/FavoriteMoviesCorePackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ioscourse_favoritemoviesexercise"
+      ],
+      "outputFileMapPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCorePackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.FavoriteMoviesCoreTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/sources",
+      "importPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Tests/FavoriteMoviesCoreTests/FavoriteMoviesRepositoryTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FavoriteMoviesCoreTests",
+      "moduleOutputPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCoreTests.swiftmodule",
+      "objects" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/FavoriteMoviesRepositoryTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ioscourse_favoritemoviesexercise"
+      ],
+      "outputFileMapPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/FavoriteMoviesRepositoryTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules/FavoriteMoviesCoreTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Tests/FavoriteMoviesCoreTests/FavoriteMoviesRepositoryTests.swift"
+      ],
+      "tempsPath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "FavoriteMoviesCore" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FavoriteMoviesCore",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-c",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Sources/FavoriteMoviesCore/FavoriteMoviesRepository.swift",
+      "-I",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/include/FavoriteMoviesCore-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "FavoriteMoviesCorePackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FavoriteMoviesCorePackageTests",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-c",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift",
+      "-I",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/include/FavoriteMoviesCorePackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "FavoriteMoviesCoreTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FavoriteMoviesCoreTests",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-c",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Tests/FavoriteMoviesCoreTests/FavoriteMoviesRepositoryTests.swift",
+      "-I",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ioscourse_favoritemoviesexercise",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "FavoriteMoviesCore" : [
+
+    ],
+    "FavoriteMoviesCorePackageTests" : [
+      "FavoriteMoviesCoreTests",
+      "FavoriteMoviesCore"
+    ],
+    "FavoriteMoviesCoreTests" : [
+      "FavoriteMoviesCore"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Sources/FavoriteMoviesCore/FavoriteMoviesRepository.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/sources"
+    },
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/sources"
+    },
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCore.build/FavoriteMoviesRepository.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/FavoriteMoviesRepositoryTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCorePackageTests.product/Objects.LinkFileList"
+    },
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/Tests/FavoriteMoviesCoreTests/FavoriteMoviesRepositoryTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/FavoriteMoviesCoreTests.build/sources"
+    },
+    "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Volumes/external/projects/IOSCourse-FavoriteMoviesExercise/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

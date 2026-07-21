@@ -1,79 +1,72 @@
-//
-//  AddNewMovieVC.swift
-//  Fav-movies
-//
-//  Created by Erol Akarsu on 12/16/15.
-//  Copyright © 2015 Erol Akarsu. All rights reserved.
-//
-
 import UIKit
-import CoreData
 
-class AddNewMovieVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-       
-    
-    @IBOutlet weak var movieTitle: UITextField!
-    @IBOutlet weak var imdbURL: UITextField!
-    
-    
-    @IBOutlet weak var myDescription: UITextField!
-    
-    
-    @IBOutlet weak var imdbPlotDescription: UITextField!
-    
-    
-    @IBOutlet weak var imdbImage: UIImageView!
-    
-    @IBOutlet weak var addMovieButton: UIButton!
+final class AddNewMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet private weak var movieTitle: UITextField!
+    @IBOutlet private weak var imdbURL: UITextField!
+    @IBOutlet private weak var myDescription: UITextField!
+    @IBOutlet private weak var imdbPlotDescription: UITextField!
+    @IBOutlet private weak var imdbImage: UIImageView!
+    @IBOutlet private weak var addMovieButton: UIButton!
+    private let imagePicker = UIImagePickerController()
 
-    
-    var imagePicker: UIImagePickerController!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imdbImage.layer.cornerRadius = 4.0
+        imagePicker.sourceType = .photoLibrary
+        imdbImage.image = nil
+        imdbImage.layer.cornerRadius = 4
         imdbImage.clipsToBounds = true
-         
+        configure(movieTitle, id: "movie.title", labelKey: "field.title")
+        configure(imdbURL, id: "movie.url", labelKey: "field.url")
+        configure(myDescription, id: "movie.personalDescription", labelKey: "field.personalDescription")
+        configure(imdbPlotDescription, id: "movie.plot", labelKey: "field.plot")
+        addMovieButton.accessibilityIdentifier = "movie.save"
+        addMovieButton.accessibilityLabel = NSLocalizedString("button.saveMovie", comment: "Save")
     }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        imdbImage.image = image
-    }
-    
-    @IBAction func addImage(sender: AnyObject!) {
-        presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func createMovie(sender: AnyObject!) {
-        if let title = movieTitle.text where title != "" {
-            
-            let app = UIApplication.sharedApplication().delegate as! AppDelegate
-            let context = app.managedObjectContext
-            let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context)!
-            let movie = Movie(entity: entity, insertIntoManagedObjectContext: context)
-            movie.movieTitle = title
-            movie.imdbURL = imdbURL.text
-            movie.myDescription = myDescription.text
-            movie.imdbPlotDescription = imdbPlotDescription.text
-            movie.setMovieImage(imdbImage.image!)
-            
-            context.insertObject(movie)
-            
-            do {
-                try context.save()
-            } catch {
-                print("Could not save recipe")
-            }
-            
-            self.navigationController?.popViewControllerAnimated(true)
-        }
 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let image = info[.originalImage] as? UIImage { imdbImage.image = image }
+        picker.dismiss(animated: true)
     }
-    
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) { picker.dismiss(animated: true) }
+
+    @IBAction private func addImage(_ sender: AnyObject) { present(imagePicker, animated: true) }
+
+    @IBAction private func createMovie(_ sender: AnyObject) {
+        view.endEditing(true)
+        let draft = FavoriteMovieDraft(
+            title: movieTitle.text ?? "",
+            imdbURL: imdbURL.text ?? "",
+            personalDescription: myDescription.text ?? "",
+            plotDescription: imdbPlotDescription.text ?? ""
+        )
+        let imageData = imdbImage.image?.jpegData(compressionQuality: 0.82)
+        guard let app = UIApplication.shared.delegate as? AppDelegate, app.persistenceError == nil else {
+            return showError(key: "error.persistence")
+        }
+        do {
+            _ = try app.movieRepository.create(draft: draft, imageData: imageData)
+            navigationController?.popViewController(animated: true)
+        } catch let error as FavoriteMovieValidationError {
+            showError(key: "error.\(error.rawValue)")
+        } catch {
+            showError(key: "error.persistence")
+        }
+    }
+
+    private func configure(_ field: UITextField, id: String, labelKey: String) {
+        field.accessibilityIdentifier = id
+        field.accessibilityLabel = NSLocalizedString(labelKey, comment: "Movie field")
+        field.clearButtonMode = .whileEditing
+        field.autocorrectionType = .no
+    }
+
+    private func showError(key: String) {
+        let message = NSLocalizedString(key, comment: "Movie error")
+        let alert = UIAlertController(title: NSLocalizedString("error.title", comment: "Error"), message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("button.ok", comment: "OK"), style: .default))
+        present(alert, animated: true)
+        UIAccessibility.post(notification: .announcement, argument: message)
+    }
 }

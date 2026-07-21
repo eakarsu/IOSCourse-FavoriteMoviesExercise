@@ -1,0 +1,14 @@
+name: favorite-movies-ios-ci
+on: [push, pull_request]
+permissions: { contents: read }
+jobs:
+  verify:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift test
+      - run: plutil -lint Fav-movies/Info.plist Fav-movies/PrivacyInfo.xcprivacy Fav-movies/en.lproj/Localizable.strings Fav-movies.xcodeproj/project.pbxproj
+      - run: xmllint --noout Fav-movies/Base.lproj/Main.storyboard Fav-movies/Fav_movies.xcdatamodeld/Fav_movies.xcdatamodel/contents Fav-movies.xcodeproj/xcshareddata/xcschemes/Fav-movies.xcscheme
+      - run: ibtool --errors --warnings --notices --minimum-deployment-target 15.0 Fav-movies/Base.lproj/Main.storyboard
+      - run: xcodebuild -project Fav-movies.xcodeproj -scheme Fav-movies -destination 'platform=iOS Simulator,name=iPhone 16 Pro' -configuration Debug CODE_SIGNING_ALLOWED=NO test
+      - run: xcodebuild -project Fav-movies.xcodeproj -scheme Fav-movies -sdk iphonesimulator -configuration Release CODE_SIGNING_ALLOWED=NO analyze

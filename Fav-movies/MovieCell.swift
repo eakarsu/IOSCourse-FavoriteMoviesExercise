@@ -1,36 +1,24 @@
-//
-//  MovieCell.swift
-//  Fav-movies
-//
-//  Created by Erol Akarsu on 12/16/15.
-//  Copyright © 2015 Erol Akarsu. All rights reserved.
-//
-
 import UIKit
 
-class MovieCell: UITableViewCell {
+final class MovieCell: UITableViewCell {
+    @IBOutlet private weak var imdbImage: UIImageView!
+    @IBOutlet private weak var movieTitle: UITextField!
+    @IBOutlet private weak var imdbURL: UITextField!
+    @IBOutlet private weak var myDescription: UITextField!
 
-    @IBOutlet weak var imdbImage: UIImageView!
-    
-    
-    @IBOutlet weak var movieTitle: UITextField!
-    
-    
-    @IBOutlet weak var imdbURL: UITextField!
-    
-    @IBOutlet weak var myDescription: UITextField!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        [movieTitle, imdbURL, myDescription].forEach { $0?.isUserInteractionEnabled = false }
+        isAccessibilityElement = true
+        accessibilityTraits = .button
     }
-    
-    func configureCell(movie: Movie) {
-        
-        movieTitle.text = movie.movieTitle
+
+    func configure(movie: FavoriteMovieRecord) {
+        movieTitle.text = movie.title
         imdbURL.text = movie.imdbURL
-        myDescription.text = movie.myDescription
-        imdbImage.image = movie.getMovieImg()
+        myDescription.text = movie.personalDescription
+        imdbImage.image = movie.imageData.flatMap(UIImage.init(data:))
+        accessibilityIdentifier = "movie.row.\(movie.id.uuidString)"
+        accessibilityLabel = [movie.title, movie.personalDescription].filter { !$0.isEmpty }.joined(separator: ". ")
     }
-    
 }
