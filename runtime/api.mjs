@@ -38,6 +38,9 @@ const server = http.createServer(async (request, response) => {
   if (request.method === 'OPTIONS') { response.writeHead(204, { 'Access-Control-Allow-Origin': allowedOrigin, 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS' }); response.end(); return; }
   try {
     if (request.method === 'GET' && url.pathname === '/api/health/ready') { query('SELECT 1'); json(response, 200, { status: 'ready', database: 'connected' }); return; }
+    if (request.method === 'GET' && url.pathname === '/api/auth/demo-credentials' && process.env.NODE_ENV !== 'production') {
+      json(response, 200, { email: process.env.PROVISION_ADMIN_EMAIL, password: process.env.PROVISION_ADMIN_PASSWORD }); return;
+    }
     if (request.method === 'POST' && url.pathname === '/api/auth/login') {
       const body = await readBody(request); const email = String(body.email || '').trim().toLowerCase(); const password = String(body.password || '');
       const row = query(`SELECT id,email,password_hash,display_name,role FROM runtime_users WHERE email=${literal(email)} AND active=TRUE LIMIT 1`, { rows: true });
